@@ -3,14 +3,18 @@
     display: block;
     @media (min-width: map_get($breakpoints, 'sm') + px) {
         max-width: map_get($breakpoints, 'sm')+ px;
-        margin: 0 auto;
+        margin: 2em auto;
     }
     @media (min-width: map_get($breakpoints, 'md') + px) {
         max-width: map_get($breakpoints, 'md')+ px;
-        margin: 0 auto;
+        margin: 4em auto;
     }
     @media (min-width: map_get($breakpoints, 'lg') + px) {
         max-width: map_get($breakpoints, 'lg')+ px;
-        margin: 0 auto;
+        margin: 6em auto;
     }
+}
+
+.Section--centered {
+    text-align: center;
 }

@@ -7,14 +7,31 @@ $breakpoints: (
 
 $body-color: #555;
 $heading-color: #222;
+$accent-color: #ff0000;
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
-    color: $body-color;
-    border-bottom: 1px dotted $body-color;
+    color: $accent-color;
+    border-bottom: 1px dotted $accent-color;
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.no-margin {
+    margin: 0;
 }

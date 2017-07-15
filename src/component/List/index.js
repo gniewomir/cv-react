@@ -3,9 +3,11 @@ import block from '../../util/bem';
 
 class List extends Component {
     render() {
+        let {horizontal, children, cssclass} = this.props;
+        const b = block('List');
         return (
-            <ul className={block('List')}>
-                {this.props.children}
+            <ul className={b({horizontal: horizontal}).mix(cssclass)}>
+                {children}
             </ul>
         );
     }

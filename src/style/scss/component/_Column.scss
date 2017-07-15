@@ -1,3 +1,27 @@
 .Column {
     flex: 1;
 }
+
+@media (min-width: map_get($breakpoints, 'sm') + px) {
+
+    .Column--rightborder {
+        padding-right: 9px;
+        border-right: 1px solid black;
+        margin-right: 10px;
+    }
+
+    .Column--leftborder {
+        padding-left: 9px;
+        border-left: 1px solid black;
+        margin-left: 10px;
+    }
+
+    .Column--rightgutter {
+        padding-right: 10px;
+    }
+
+    .Column--leftgutter {
+        padding-left: 10px;
+    }
+
+}

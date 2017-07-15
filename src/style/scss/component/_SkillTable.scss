@@ -1,0 +1,22 @@
+$skilltable-row-height: 110px;
+
+@import 'component/SkillTable/Block';
+
+.SkillTable {
+    margin-top: 2em;
+}
+
+.SkillTable__Row__Header {
+    text-align: center;
+    @media (min-width: map_get($breakpoints, 'md') + px) {
+        line-height: $skilltable-row-height;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+}
+
+.SkillTable__List {
+    margin: 0;
+}

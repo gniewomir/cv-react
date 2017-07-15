@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import block from '../../util/bem';
 
-class Row extends Component {
+class Accent extends Component {
     render() {
-        const b = block('Row');
         return (
-            <div className={b()}>
+            <span className={block('Accent')}>
                 {this.props.children}
-            </div>
+            </span>
         );
     }
 }
 
-export default Row;
+export default Accent;
