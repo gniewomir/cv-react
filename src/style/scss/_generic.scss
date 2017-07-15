@@ -1,0 +1,20 @@
+$breakpoints: (
+    'xs' : 480,
+    'sm' : 768,
+    'md' : 1024,
+    'lg' : 1280
+);
+
+$body-color: #555;
+$heading-color: #222;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $body-color;
+    border-bottom: 1px dotted $body-color;
+}

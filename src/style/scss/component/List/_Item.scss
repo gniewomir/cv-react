@@ -1,0 +1,6 @@
+.Item__Header {
+    margin-right: 5px;
+    &::after {
+        content: ':'
+    }
+}

@@ -1,0 +1,8 @@
+.Row {
+    display: block;
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+}

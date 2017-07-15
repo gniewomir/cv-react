@@ -1,0 +1,16 @@
+.Section {
+    margin: 0 20px;
+    display: block;
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        max-width: map_get($breakpoints, 'sm')+ px;
+        margin: 0 auto;
+    }
+    @media (min-width: map_get($breakpoints, 'md') + px) {
+        max-width: map_get($breakpoints, 'md')+ px;
+        margin: 0 auto;
+    }
+    @media (min-width: map_get($breakpoints, 'lg') + px) {
+        max-width: map_get($breakpoints, 'lg')+ px;
+        margin: 0 auto;
+    }
+}
