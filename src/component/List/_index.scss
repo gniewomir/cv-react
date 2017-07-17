@@ -1,6 +1,11 @@
+@import './Item/index';
+
 .List {
     list-style-type: none;
-    padding: 0;
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .List--horizontal {

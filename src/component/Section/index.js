@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-import block from '../../util/bem';
+import React from 'react';
+import b from '../../util/bem';
 
-class Section extends Component {
-    render() {
-        const b = block('Section');
-        return (
-            <section className={b({centered: this.props.centered})}>
-                {this.props.children}
-            </section>
-        );
-    }
-}
+const Section = ({css, children}) => {
+    return (
+        <section className={b('Section').mix(css)}>
+            {children}
+        </section>
+    );
+};
 
 export default Section;

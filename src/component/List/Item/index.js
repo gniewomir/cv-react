@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import block from '../../../util/bem';
+import React from 'react';
+import bem from '../../../util/bem';
 
-class Item extends Component {
-    render() {
-        return (
-            <li className={block('Item')}>
-                {this.props.header &&
-                    <span className={block('Item')('Header')}>{this.props.header}</span>
-                }
-                {this.props.children}
-                {this.props.content}
-            </li>
-        );
-    }
-}
+const Item = ({header, content, children}) => {
+    const b = bem('Item');
+    return (
+        <li className={b()}>
+            {header &&
+                <span className={b('Header')}>{header}</span>
+            }
+            {children}
+            {content}
+        </li>
+    );
+};
 
 export default Item;

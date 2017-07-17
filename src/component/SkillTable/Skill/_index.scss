@@ -1,0 +1,22 @@
+
+.Skill__Row__Header {
+    text-align: center;
+    @media (min-width: map_get($breakpoints, 'lg') + px) {
+        line-height: $skilltable-row-height;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+}
+
+.Skill__Row__Description {
+    text-align: center;
+    @media (min-width: map_get($breakpoints, 'lg') + px) {
+        text-align: right;
+    }
+}
+
+.Skill__List {
+    margin: 0;
+}

@@ -2,7 +2,7 @@
     display: none;
     text-align: center;
     color: $accent-color;
-    border-radius: 5px;
+    cursor: not-allowed;
     @include t-h1;
     @media (min-width: map_get($breakpoints, 'md') + px) {
         line-height: $skilltable-row-height;
@@ -19,37 +19,41 @@
     }
 }
 
-.Block--enabled.Block--important {
+.Block--important {
     display: block;
 }
 
 @media (min-width: map_get($breakpoints, 'lg') + px) {
     // REF: http://www.color-hex.com/color-palette/2539
-    .Block--background-Learning.Block--enabled {
+    .Block--position-0.Block--enabled {
         background: #ffbaba;
     }
 
-    .Block--background-Workedwith.Block--enabled {
+    .Block--position-1.Block--enabled {
         background: #ff7b7b;
     }
 
-    .Block--background-Comfortable.Block--enabled {
+    .Block--position-2.Block--enabled {
         background: #ff5252;
     }
 
-    .Block--background-Experienced.Block--enabled {
+    .Block--position-3.Block--enabled {
         background: #ff0000;
     }
 
-    .Block--background-Expert.Block--enabled {
+    .Block--position-4.Block--enabled {
         background: #a70000;
     }
 
     .Block--enabled {
         color: #eee;
+        box-shadow: 0 4px 4px rgba(4px,0,4px,.7);
+        cursor: pointer;
         &:hover {
+
             background: $accent-color;
             transition: background-color 1s ease;
+
             animation: bounce 1s infinite;
             animation-iteration-count: 1;
             transform-origin: center bottom;
@@ -62,7 +66,7 @@
         transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
         transform: translate3d(0,0,0);
         transform-style: preserve-3d;
-        box-shadow: 0 0 0 rgba(0,0,0,.9);
+        box-shadow: 0 4px 4px rgba(4px,0,4px,.7);
     }
 
     40%, 43% {
@@ -85,3 +89,4 @@
         box-shadow: 0 4px 4px rgba(4px,0,4px,.7);
     }
 }
+

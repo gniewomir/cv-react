@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
-import block from '../../../util/bem';
-import { makeSafeForCssClass } from '../../../util/css';
+import React from 'react';
+import b from '../../../util/bem';
 
-class Block extends Component {
-    render() {
-        let {enabled, important, children} = this.props;
-        return (
-            <div className={block('Block')({enabled: enabled, important: important, background: makeSafeForCssClass(children)})}>
-                {children}
-            </div>
-        );
-    }
-}
+const Block = ({enabled, important, children, position}) => {
+    return (
+        <div className={b('Block')({enabled: enabled, important: important})({position: ''+position})}>
+            {children}
+        </div>
+    );
+};
 
-export default Block;
+export default  Block;

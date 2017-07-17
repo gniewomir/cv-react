@@ -1,38 +1,29 @@
-import React, { Component } from 'react';
-import block from '../../util/bem';
+import React from 'react';
+import b from '../../util/bem';
 
-class Link extends Component {
-
-    getProtocol(type) {
-        switch (type) {
-            case 'skype':
-                return 'skype:';
-            case 'email':
-                return 'mailto:';
-            case 'phone':
-                return 'tel:';
-            default:
-                return '';
-        }
+const createLink = (type, href) => {
+    switch (type) {
+        case 'skype':
+            return 'skype:'+href;
+        case 'email':
+            return 'mailto:'+href;
+        case 'phone':
+            return 'tel:'+href;
+        default:
+            return href;
     }
+};
 
-    render() {
-        let {type, content, href, title} = this.props
-        if (!href) {
-            throw new Error('You have to provide href for Link component');
-        }
-        if (!content) {
-            content = href;
-        }
-        if (!title) {
-            title = content;
-        }
-        return (
-            <a className={block('Link')({type: type})} href={this.getProtocol(type)+href} title={title}>
-                {content}
-            </a>
-        );
-    }
+const Link = ({type, content, href, title, onClick}) => {
+    const handler = (e) => {
+        e.preventDefault();
+        onClick();
+    };
+    return (
+        <a className={b('Link')({type: type})} href={createLink(type, href)} title={title} onClick={handler}>
+            {content}
+        </a>
+    );
 }
 
 export default Link;

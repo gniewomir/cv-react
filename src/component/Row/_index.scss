@@ -1,0 +1,39 @@
+.Row {
+    display: block;
+    box-sizing: border-box;
+
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+    }
+}
+
+.Row--border {
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        .Column {
+            border-left: 1px solid $body-color;
+        }
+
+        .Column:first-of-type {
+            border-left: 0px;
+        }
+    }
+}
+
+.Row--gutter {
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        .Column {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .Column:first-of-type {
+            padding-left: 0;
+        }
+
+        .Column:last-of-type {
+            padding-right: 0;
+        }
+    }
+}

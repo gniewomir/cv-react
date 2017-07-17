@@ -1,0 +1,6 @@
+{
+    "/api/*": "/$1",
+    "/:resource/:id/show": "/:resource/:id",
+    "/skills/:title": "/skills?title=:title",
+    "/api/skills/:id": "/skills?id=:id"
+}

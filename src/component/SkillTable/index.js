@@ -1,122 +1,41 @@
 import React, { Component } from 'react';
-import block from '../../util/bem';
 
-import Column from '../Column';
-import Row from '../Row';
-import List from '../List';
-import Item from '../List/Item';
-import Block from './Block';
+import { bindActionCreators } from 'redux';
+import { connect} from 'react-redux';
+import * as actions from '../../service/store/creator/skill';
+
+import bem from '../../util/bem';
+import Section from '../Section';
+import Listing from './Listing';
+import Loader from '../Loader';
 
 class SkillTable extends Component {
+
+    componentDidMount() {
+        this.props.searchSkills('important');
+    }
+
     render() {
-        const b = block('SkillTable');
+        const b = bem('SkillTable');
         return (
-            <div className={b()}>
-                <Row>
-                    <Column rightborder>
-                        <h1 className={b('Row')('Header')}>OOP PHP/Patterns</h1>
-                    </Column>
-                    <Column>
-                        <List horizontal cssclass={b('List')}>
-                            <Item>
-                                <Block enabled>
-                                    Learning
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block enabled>
-                                    Worked with
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block enabled>
-                                    Comfortable
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block enabled important>
-                                    Experienced
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block>
-                                    Expert
-                                </Block>
-                            </Item>
-                        </List>
-                    </Column>
-                </Row>
-                <Row>
-                    <Column rightborder>
-                        <h1 className={b('Row')('Header')}>Java Script/React/Redux</h1>
-                    </Column>
-                    <Column>
-                        <List horizontal cssclass={b('List')}>
-                            <Item>
-                                <Block enabled>
-                                    Learning
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block enabled>
-                                    Worked with
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block enabled important>
-                                    Comfortable
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block>
-                                    Experienced
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block>
-                                    Expert
-                                </Block>
-                            </Item>
-                        </List>
-                    </Column>
-                </Row>
-                <Row>
-                    <Column rightborder>
-                        <h1 className={b('Row')('Header')}>Shell/Linux</h1>
-                    </Column>
-                    <Column>
-                        <List horizontal cssclass={b('List')}>
-                            <Item>
-                                <Block enabled>
-                                    Learning
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block enabled>
-                                    Worked with
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block enabled important>
-                                    Comfortable
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block>
-                                    Experienced
-                                </Block>
-                            </Item>
-                            <Item>
-                                <Block>
-                                    Expert
-                                </Block>
-                            </Item>
-                        </List>
-                    </Column>
-                </Row>
-            </div>
+            <Section className={b()}>
+                <input placeholder="Search..." className={b('Filter')} onChange={(event) => { this.props.searchSkills(event.target.value); }} />
+                {this.props.loading &&
+                    <Loader />
+                }
+                {this.props.skills && this.props.skills &&
+                    <Listing skills={this.props.skills}/>
+                }
+            </Section>
         );
     }
 }
 
-export default SkillTable;
+export default connect(
+    (state, ownProps) => {
+        return { skills: state.SkillReducer.skills }
+    },
+    (dispatch) => {
+        return bindActionCreators(actions, dispatch);
+    }
+)(SkillTable);

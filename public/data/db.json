@@ -1,0 +1,915 @@
+{
+    "skills": [
+        {
+            "id": 1,
+            "title": "PHP",
+            "description": "Pure PHP is my main area of expertise. ",
+            "tags": [
+                "backend",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Java Script",
+            "description": "Lacking experience on server side, but I'am working on it.",
+            "tags": [
+                "frontend",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Linux",
+            "description": "User for last decade.",
+            "tags": [
+                "backend",
+                "server",
+                "automation",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "SQL/RDMS/ORM's",
+            "description": "I'am using databases, but I'am not DBA.",
+            "tags": [
+                "backend"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "NoSQL",
+            "tags": [
+                "backend",
+                "Java Script"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Symfony",
+            "description": "Learning. This framework - excluding annotations - is best example of good practices in PHP, but I still cannot get my head around how many programers are using it - without understanding principles on which it was built.",
+            "tags": [
+                "backend",
+                "PHP"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "WordPress",
+            "description": "I've built, maintained, moved, cleaned up and hardened after attack countless WordPress sites. No longer fun, unless you have really big project to handle.",
+            "tags": [
+                "framework",
+                "cms",
+                "deprecated"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "SOLID",
+            "description": "Getting practical understanding on how apply this principles in day to day programming is most important and productive thing a programmer can do.",
+            "tags": [
+                "backend",
+                "OOP",
+                "architecture",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "React/React Router/Redux",
+            "description": "My current hobby. ES6/Babel/React/Redux are making frontend work fun again. I'am planning to play with serverside rendering and React Native.",
+            "tags": [
+                "frontend",
+                "Java Script",
+                "important",
+                "framework",
+                "tool"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Vagrant",
+            "tags": [
+                "backend",
+                "server"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Docker",
+            "tags": [
+                "backend",
+                "server"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "title": "Domain-driven design",
+            "tags": [
+                "backend",
+                "OOP",
+                "architecture"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "title": "semantic HTML5",
+            "tags": [
+                "frontend",
+                "SEO"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "CSS/SASS/LESS",
+            "tags": [
+                "frontend",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "title": "Security",
+            "description": "Knowlege about basic vunerabilities (XSS, XSRF, SQL injections) and ability to find & cleanup malware don't makes me an expert.",
+            "tags": [
+                "backend",
+                "server"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Basics",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Advanced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "title": "Apache/Ngnix",
+            "tags": [
+                "backend",
+                "server"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "title": "Shell scripting",
+            "description": "Automate all the things!",
+            "tags": [
+                "backend",
+                "server",
+                "automation",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "title": "Angular",
+            "tags": [
+                "frontend",
+                "Java Script",
+                "framework"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "title": "Webpack/Grunt/Gulp",
+            "description": "Automate all the things!",
+            "tags": [
+                "frontend",
+                "Java Script",
+                "tool",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "title": "jQuery",
+            "description": "That's a bad, bad idea.",
+            "tags": [
+                "frontend",
+                "Java Script",
+                "tool",
+                "deprecated"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "title": "Unit Testing",
+            "description": "Beacause bugs are bad.",
+            "tags": [
+                "backend",
+                "frontend",
+                "OOP",
+                "architecture"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "title": "PHP Unit",
+            "tags": [
+                "backend",
+                "OOP",
+                "tool"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "title": "Jest",
+            "tags": [
+                "javascript",
+                "frontend",
+                "tool"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "title": "Responsive Web Design",
+            "description": "Check this website in diffrent resolutions.",
+            "tags": [
+                "frontend",
+                "mobile",
+                "important"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "title": "GIT",
+            "tags": [
+                "backend",
+                "server",
+                "important",
+                "tool"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": false
+                },
+                {
+                    "label": "Comfortable",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Experienced",
+                    "enabled": false,
+                    "important": false
+                },
+                {
+                    "label": "Expert",
+                    "enabled": false,
+                    "important": false
+                }
+            ]
+        }
+    ]
+}
