@@ -1,12 +1,15 @@
 .Block {
     display: none;
     text-align: center;
-    color: $accent-color;
     cursor: not-allowed;
-    @include t-h1;
+    @include t-p;
+    color: $accent-color;
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        @include t-h1;
+        line-height: $skilltable-row-height;
+    }
     @media (min-width: map_get($breakpoints, 'md') + px) {
         line-height: $skilltable-row-height;
-        margin: 0;
     }
     @media (min-width: map_get($breakpoints, 'lg') + px) {
         display: block;
