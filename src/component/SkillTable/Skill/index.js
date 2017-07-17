@@ -3,7 +3,6 @@ import bem from '../../../util/bem';
 import Column from '../../Column';
 import Row from '../../Row';
 import Level from '../Level';
-import orphans from '../../../util/orphans';
 
 const Skill = ({title, description, level}) => {
     const b = bem('Skill');
@@ -15,7 +14,7 @@ const Skill = ({title, description, level}) => {
                     () => {
                         return(
                             <p className={b('Row')('Description')}>
-                                {orphans(description)}
+                                {description}
                             </p>
                         );
                     }
