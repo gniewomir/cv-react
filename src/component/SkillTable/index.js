@@ -23,7 +23,7 @@ class SkillTable extends Component {
                 {this.props.loading &&
                     <Loader />
                 }
-                {this.props.skills && this.props.skills &&
+                {!this.props.loading && this.props.skills &&
                     <Listing skills={this.props.skills}/>
                 }
             </Section>
