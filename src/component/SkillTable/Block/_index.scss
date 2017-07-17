@@ -59,6 +59,11 @@
             transform-origin: center bottom;
         }
     }
+    .Block--enabled.Block--focus {
+        background: $accent-color;
+        animation: bounce 1s infinite;
+        transform-origin: center bottom;
+    }
 }
 
 @keyframes bounce {

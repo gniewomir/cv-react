@@ -10,7 +10,7 @@ const Level = ({levels}) => {
             {levels.map((level, index) => {
                 return (
                     <Item key={index}>
-                        <Block enabled={level.enabled} important={level.important} position={index}>
+                        <Block enabled={level.enabled} important={level.important} focus={level.focus} position={index}>
                             {level.label}
                         </Block>
                     </Item>
