@@ -1,6 +1,6 @@
 import React from 'react';
 import b from '../../util/bem';
-import Svg from '../../image/svg/Logo.svg';
+import Svg from '../../image/svg/logo.svg';
 
 const Logo = () => {
     return (

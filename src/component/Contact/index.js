@@ -25,7 +25,7 @@ const Contact = () => {
                             <Link href="+48532423322" type="phone" content="+48 532-423-322"/>
                         </Item>
                         <Item header="GitHub">
-                            <Link href="https://github.com/gniewomir"/>
+                            <Link href="https://github.com/gniewomir" content="https://github.com/gniewomir"/>
                         </Item>
                     </List>
                 </Column>
