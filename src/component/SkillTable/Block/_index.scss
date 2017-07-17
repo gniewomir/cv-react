@@ -6,15 +6,12 @@
     color: $accent-color;
     @media (min-width: map_get($breakpoints, 'sm') + px) {
         @include t-h1;
-        line-height: $skilltable-row-height;
-    }
-    @media (min-width: map_get($breakpoints, 'md') + px) {
-        line-height: $skilltable-row-height;
     }
     @media (min-width: map_get($breakpoints, 'lg') + px) {
         display: block;
         width: $skilltable-row-height;
         height: $skilltable-row-height;
+        line-height: $skilltable-row-height;
         margin: 5px;
         font-size: 0.8em;
         background: #eee;

@@ -1,7 +1,5 @@
 .Row {
     display: block;
-    box-sizing: border-box;
-
     @media (min-width: map_get($breakpoints, 'sm') + px) {
         display: flex;
         flex-flow: row;
@@ -12,6 +10,7 @@
 .Row--border {
     @media (min-width: map_get($breakpoints, 'sm') + px) {
         .Column {
+            box-sizing: border-box;
             border-left: 1px solid $body-color;
         }
 
