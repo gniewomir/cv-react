@@ -1,8 +1,9 @@
 import * as action from '../action/skill';
 import axios from 'axios';
 
-const requestSkills = () => {
+const fetchSkills = () => {
     return dispatch => {
+        dispatch(requestSkills());
         return axios.get('/data/db.json')
             .then(
                 (response) => {
@@ -14,6 +15,12 @@ const requestSkills = () => {
                     dispatch(errorSkills(error));
                 }
             );
+    }
+}
+
+const requestSkills = () => {
+    return {
+        type: action.SKILL_REQUEST
     }
 }
 
@@ -41,11 +48,11 @@ const filterSkills = (query) => {
 const searchSkills = (query) => {
     return dispatch => {
         dispatch(filterSkills(query));
-        dispatch(requestSkills());
+        dispatch(fetchSkills());
     }
 }
 
 export {
-    requestSkills,
+    fetchSkills,
     searchSkills
 }

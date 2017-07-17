@@ -73,13 +73,8 @@ export default (state, newAction) => {
         case action.SKILL_REQUEST:
             return {
                 ...state,
-                test: true
-            };
-        case action.SKILL_FETCH:
-            return {
-                ...state,
                 isLoading: true
-            }
+            };
         case action.SKILL_RECEIVED:
             return {
                 ...state,
