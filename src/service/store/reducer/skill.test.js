@@ -5,7 +5,8 @@ test('reducer returns correct initial state', () => {
         SkillReducer(undefined, {}))
     .toEqual({
         skills: [],
-        isLoading: false
+        isLoading: false,
+        query: ''
     });
 });
 
