@@ -1,7 +1,6 @@
 .Block {
     display: none;
     text-align: center;
-    cursor: not-allowed;
     @include t-p;
     color: $accent-color;
     @media (min-width: map_get($breakpoints, 'sm') + px) {
@@ -9,6 +8,7 @@
     }
     @media (min-width: map_get($breakpoints, 'lg') + px) {
         display: block;
+        cursor: not-allowed;
         width: $skilltable-row-height;
         height: $skilltable-row-height;
         line-height: $skilltable-row-height;
