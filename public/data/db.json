@@ -333,9 +333,11 @@
         {
             "id": 10,
             "title": "Vagrant",
+            "description": "Because you don't want to install PHP 5.2.17 on your machine.",
             "tags": [
                 "backend",
-                "server"
+                "server",
+                "important"
             ],
             "level": [
                 {
@@ -474,6 +476,7 @@
         {
             "id": 14,
             "title": "CSS/SASS/LESS",
+            "description": "Who cares if it works, if it doesn't look good?",
             "tags": [
                 "frontend",
                 "important"
@@ -877,6 +880,7 @@
         {
             "id": 25,
             "title": "GIT",
+            "description": "Have you ever tried to work with SVN? It's pure pain.",
             "tags": [
                 "backend",
                 "server",
