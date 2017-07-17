@@ -679,7 +679,8 @@
             "level": [
                 {
                     "label": "Learning",
-                    "enabled": true
+                    "enabled": true,
+                    "important": true
                 },
                 {
                     "label": "Worked with"
