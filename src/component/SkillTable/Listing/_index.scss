@@ -1,0 +1,8 @@
+.Listing__NoResults {
+    text-align: center;
+    @media (min-width: map_get($breakpoints, 'lg') + px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
