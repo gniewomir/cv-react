@@ -757,6 +757,35 @@
                     "label": "Expert"
                 }
             ]
+        },
+        {
+            "id": 25,
+            "title": "Varnish",
+            "tags": [
+                "backend",
+                "server",
+                "tool"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": "Comfortable",
+                },
+                {
+                    "label": "Experienced"
+                },
+                {
+                    "label": "Expert"
+                }
+            ]
         }
     ]
 }
