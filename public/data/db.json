@@ -34,7 +34,7 @@
         {
             "id": 2,
             "title": "Java Script",
-            "description": "Lacking experience on server side, but I'am working on it.",
+            "description": "Falling in love since ES6 made this language plesant to work with.",
             "tags": [
                 "frontend",
                 "important"
@@ -216,7 +216,6 @@
             "title": "SOLID",
             "description": "Getting practical understanding on how apply this principles in day to day programming is most important and productive thing a programmer can do.",
             "tags": [
-                "backend",
                 "OOP",
                 "architecture",
                 "important"
@@ -233,7 +232,8 @@
                 {
                     "label": "Habit",
                     "enabled": true,
-                    "important": true
+                    "important": true,
+                    "focus": true
                 },
                 {
                     "label": "Evangelist"
@@ -246,7 +246,7 @@
         {
             "id": 9,
             "title": "React/React Router/Redux",
-            "description": "My current hobby. If you are curious how it goes, check out GitHub repository of this site. ES6/Babel/React/Redux are making frontend work fun again. I'am planning to play with serverside rendering and React Native.",
+            "description": "My current hobby. If you are curious how it goes, check out GitHub repository of this site. ES6/Babel/React/Redux are making frontend work fun again. React Native is next.",
             "tags": [
                 "frontend",
                 "Java Script",
@@ -610,8 +610,6 @@
             "title": "Unit Testing",
             "description": "Beacause bugs are bad.",
             "tags": [
-                "backend",
-                "frontend",
                 "OOP",
                 "architecture"
             ],
@@ -641,9 +639,9 @@
             "id": 22,
             "title": "PHP Unit",
             "tags": [
-                "backend",
                 "OOP",
-                "tool"
+                "tool",
+                "architecture"
             ],
             "level": [
                 {
@@ -672,7 +670,8 @@
             "tags": [
                 "javascript",
                 "frontend",
-                "tool"
+                "tool",
+                "architecture"
             ],
             "level": [
                 {
@@ -730,8 +729,6 @@
             "title": "GIT",
             "description": "Have you ever tried to work with SVN? It's pure pain.",
             "tags": [
-                "backend",
-                "server",
                 "important",
                 "tool"
             ],
@@ -758,7 +755,7 @@
             ]
         },
         {
-            "id": 25,
+            "id": 26,
             "title": "Varnish",
             "tags": [
                 "backend",
@@ -783,6 +780,62 @@
                 },
                 {
                     "label": "Expert"
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "title": "SEO",
+            "description": "I know white-hat side of SEO well and I treat pleasing Our Googlebot Overlords as my duty.",
+            "tags": [
+                "web",
+                "google",
+                "frontend"
+            ],
+            "level": [
+                {
+                    "label": "Learning",
+                    "enabled": true
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true
+                },
+                {
+                    "label": "Comfortable"
+                },
+                {
+                    "label": "Experienced"
+                },
+                {
+                    "label": "Expert"
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "title": "Static code analysis tools",
+            "description": "There is always more than enough bugs that software cannot catch. I have no problem with offloading those it can.",
+            "tags": [
+                "architecture"
+            ],
+            "level": [
+                {
+                    "label": ""
+                },
+                {
+                    "label": "Using",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
                 }
             ]
         }

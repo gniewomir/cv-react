@@ -1,0 +1,29 @@
+.Filter__Search__Input {
+    @include t-p;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 160px;
+    border: 0;
+    outline: 0;
+    color: $accent-color;
+    &::placeholder {
+        color: $accent-color;
+    }
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        text-align: left;
+    }
+}
+
+.Filter__Link, .Filter__Search__Input {
+    padding: 0 0.5em;
+}
+
+.Filter__FLabel, .Filter__SLabel, .Filter__Search__Input {
+    display: none;
+}
+
+@media (min-width: map_get($breakpoints, 'md') + px) {
+    .Filter__FLabel, .Filter__SLabel, .Filter__Search__Input {
+        display: block;
+    }
+}

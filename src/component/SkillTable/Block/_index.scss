@@ -47,7 +47,7 @@
 
     .Block--enabled {
         color: #eee;
-        box-shadow: 0 4px 4px rgba(4px,0,4px,.7);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .7);
         cursor: pointer;
         &:hover {
 
@@ -55,6 +55,7 @@
             transition: background-color 1s ease;
 
             animation: bounce 1s infinite;
+            animation-delay: 200ms;
             animation-iteration-count: 1;
             transform-origin: center bottom;
         }
@@ -63,6 +64,9 @@
         background: $accent-color;
         animation: bounce 1s infinite;
         transform-origin: center bottom;
+        &:hover {
+            animation-iteration-count: 1;
+        }
     }
 }
 

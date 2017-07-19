@@ -1,5 +1,5 @@
 import React from 'react';
-import b from '../../util/bem';
+import b from '../../../util/bem';
 
 const Column = (props) => {
     return (

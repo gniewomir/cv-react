@@ -21,11 +21,12 @@ export const filter = (skills, query) => {
                 filtered.push(skill);
                 return;
             }
-            skill.level.forEach((lvl, index) => {
+            for (const lvl in skill.level) {
                 if (lvl.enabled && lvl.label.toLowerCase().search(query) !== -1) {
                     filtered.push(skill);
+                    return;
                 }
-            });
+            }
         }
     );
     return filtered;
@@ -66,7 +67,7 @@ export default (state, newAction) => {
         return {
             skills: [],
             isLoading: false,
-            query: ''
+            query: 'important'
         };
     }
     switch (newAction.type) {

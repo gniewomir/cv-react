@@ -4,15 +4,16 @@
 
 /** generic components */
 @import 'component/Accent/index';
+@import 'component/Link/index';
 @import 'component/Section/index';
 @import 'component/Row/index';
-@import 'component/Column/index';
 @import 'component/List/index';
 @import 'component/Loader/index';
 
 /** components */
-@import 'component/App/index';
-@import 'component/Header/index';
 @import 'component/Logo/index';
+@import 'component/Header/index';
 @import 'component/SkillTable/index';
 @import 'component/Contact/index';
+@import 'component/ObservablesMenu/index';
+@import 'component/ScrollProgress/index';

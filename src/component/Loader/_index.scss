@@ -1,61 +1,58 @@
 .Loader__Grid {
-  width: 80px;
-  height: 80px;
-  margin: 100px auto;
+    width: 80px;
+    height: 80px;
+    margin: 100px auto;
 }
 
 .Loader__Grid > div {
-  width: 33%;
-  height: 33%;
-  background-color: $accent-color;
-  float: left;
-  -webkit-animation: Loader_CubeGridScaleDelay 1.3s infinite ease-in-out;
-          animation: Loader_CubeGridScaleDelay 1.3s infinite ease-in-out;
+    width: 33%;
+    height: 33%;
+    background-color: $accent-color;
+    float: left;
+    animation: Loader_CubeGridScaleDelay 1.3s infinite ease-in-out;
 }
 .Loader__Grid .Loader__Cube1 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
+    animation-delay: 0.2s;
+}
 .Loader__Grid .Loader__Cube2 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; }
+    animation-delay: 0.3s;
+}
 .Loader__Grid .Loader__Cube3 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s; }
+    animation-delay: 0.4s;
+}
 .Loader__Grid .Loader__Cube4 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; }
+    animation-delay: 0.1s;
+}
 .Loader__Grid .Loader__Cube5 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
+    animation-delay: 0.2s;
+}
 .Loader__Grid .Loader__Cube6 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; }
+    animation-delay: 0.3s;
+}
 .Loader__Grid .Loader__Cube7 {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s; }
+    animation-delay: 0s;
+}
 .Loader__Grid .Loader__Cube8 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; }
+    animation-delay: 0.1s;
+}
 .Loader__Grid .Loader__Cube9 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
+    animation-delay: 0.2s;
+}
 
 @-webkit-keyframes Loader_CubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1);
-  } 35% {
-    -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1);
-  }
+    0%, 70%, 100% {
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        transform: scale3D(0, 0, 1);
+    }
 }
 
 @keyframes Loader_CubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1);
-  } 35% {
-    -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1);
-  }
+    0%, 70%, 100% {
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        transform: scale3D(0, 0, 1);
+    }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import bem from '../../../util/bem';
-import Column from '../../Column';
+import Column from '../../Row/Column';
 import Row from '../../Row';
 import Level from '../Level';
 

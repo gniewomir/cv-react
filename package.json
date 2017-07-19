@@ -1,6 +1,6 @@
 {
   "name": "cv-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./node_modules --include-path ./src/ src/ -o src/",
@@ -13,8 +13,10 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "animated-scroll-to": "^1.1.1",
     "axios": "^0.16.2",
     "bem-cn": "^2.1.3",
+    "lodash.throttle": "^4.1.1",
     "normalize-scss": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

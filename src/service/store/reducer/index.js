@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import SkillReducer from './skill';
+import ObservableReducer from './observable';
 
 const rootReducer = combineReducers({
-    SkillReducer
+    SkillReducer,
+    ObservableReducer
 });
 
 export default rootReducer;

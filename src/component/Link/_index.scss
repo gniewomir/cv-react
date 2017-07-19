@@ -1,0 +1,15 @@
+.Link--undecorated {
+    text-decoration: none;
+    border: 0;
+}
+
+.Link--uppercase {
+    text-transform: uppercase;
+}
+
+.Link--disabled {
+    color: $body-color;
+    pointer-events: none;
+    cursor: default;
+}
+

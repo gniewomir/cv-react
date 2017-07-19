@@ -87,6 +87,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animated-scroll-to@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/animated-scroll-to/-/animated-scroll-to-1.1.1.tgz#05ce453a49fce68c50365b4e0a77cf6e127750b0"
+
 anser@1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/anser/-/anser-1.2.5.tgz#5dcfc956eaa373b9c23010dd20dabec2ce19475b"
@@ -4011,6 +4015,10 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
@@ -5838,10 +5846,6 @@ shellwords@^0.1.0:
 shortid@^2.2.6:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/shortid/-/shortid-2.2.8.tgz#033b117d6a2e975804f6f0969dbe7d3d0b355131"
-
-sierotki@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/sierotki/-/sierotki-1.2.1.tgz#41f3f98a48e9b919ed80656400285ab3a0e735af"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"

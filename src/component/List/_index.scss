@@ -8,8 +8,22 @@
 
 .List--horizontal {
     display: block;
-    @media (min-width: map_get($breakpoints, 'sm') + px) {
+    @media (min-width: map_get($breakpoints, 'md') + px) {
         display: flex;
         flex-flow: row wrap;
     }
+}
+
+.List--centered {
+    text-align: center;
+    @media (min-width: map_get($breakpoints, 'sm') + px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.List--nofold {
+    display: flex;
+    flex-flow: row wrap;
 }

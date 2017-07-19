@@ -1,6 +1,5 @@
 import React from 'react';
 import b from '../../util/bem';
-
 const createLink = (type, href) => {
     switch (type) {
         case 'skype':
@@ -14,14 +13,22 @@ const createLink = (type, href) => {
     }
 };
 
-const Link = ({type, content, href, title, onClick}) => {
-    const handler = (e) => {
-        e.preventDefault();
-        onClick();
-    };
+const Link = ({type, content, href, title, onClick, children, undecorated, uppercase, disabled}) => {
     return (
-        <a className={b('Link')({type: type})} href={createLink(type, href)} title={title} onClick={handler}>
+        <a
+            className={b('Link')({type: type, undecorated: undecorated, uppercase: uppercase, disabled: disabled})}
+            href={createLink(type, href)}
+            title={title}
+            onClick={
+                (e) => {
+                    if (typeof onClick === 'function') {
+                        onClick(e);
+                    }
+                }
+            }
+        >
             {content}
+            {children}
         </a>
     );
 }

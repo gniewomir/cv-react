@@ -2,15 +2,17 @@ import SkillReducer from './skill';
 
 test('reducer returns correct initial state', () => {
     expect(
-        SkillReducer(undefined, {}))
-    .toEqual({
+        SkillReducer(undefined, {})
+    ).toEqual({
         skills: [],
         isLoading: false,
-        query: ''
+        query: 'important'
     });
 });
 
 test('reducer returns current state in case of unidentified action', () => {
     const current = [];
-    expect(SkillReducer(current, {type: 'ACTION_THAT_DONT_EXIST'})).toBe(current);
+    expect(
+        SkillReducer(current, {type: 'ACTION_THAT_DONT_EXIST'})
+    ).toBe(current);
 });
