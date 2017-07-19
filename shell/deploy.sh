@@ -32,8 +32,13 @@ require_clean_work_tree() {
     fi
 }
 
-require_clean_work_tree
 cd "$(realpath $PROJECTROOT)"
+require_clean_work_tree
+git checkout develop
+[[ $? = 0 ]] || exit 1
+git checkout master
+[[ $? = 0 ]] || exit 1
+git rebase develop
 [[ $? = 0 ]] || exit 1
 export CI=true # because we want non-interactive test
 yarn test
@@ -45,3 +50,4 @@ ssh "$1" "find /var/www/enraged.pl/* | grep -v \".well-known\" | xargs rm -rf" #
 [[ $? = 0 ]] || exit 1
 scp -rp ./build/* "$DESTINATION"
 [[ $? = 0 ]] || exit 1
+git checkout develop
