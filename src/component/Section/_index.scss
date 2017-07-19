@@ -13,30 +13,26 @@
     }
 }
 
-@media (min-width: map_get($breakpoints, 'sm') + px) {
-
-    .Section--viewport {
-        min-height: 100vh;
+.Section--viewport {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    @media (min-width: map_get($breakpoints, 'md') + px) {
         margin: 0;
-        padding: 0;
-        @media (min-width: map_get($breakpoints, 'md') + px) {
-            margin: 0;
-        }
-        @media (min-width: map_get($breakpoints, 'lg') + px) {
-            margin: 0;
-        }
     }
-
-    .Section__outer {
-        display: table;
-        position: absolute;
-        height: 100%;
-        width: 100%;
+    @media (min-width: map_get($breakpoints, 'lg') + px) {
+        margin: 0;
     }
+}
 
-    .Section__middle {
-        display: table-cell;
-        vertical-align: middle;
-    }
+.Section__outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 
+.Section__middle {
+    display: table-cell;
+    vertical-align: middle;
 }

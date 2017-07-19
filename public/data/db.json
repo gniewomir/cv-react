@@ -838,6 +838,32 @@
                     "label": ""
                 }
             ]
+        },
+        {
+            "id": 28,
+            "title": "Scrum",
+            "tags": [
+                "important"
+            ],
+            "level": [
+                {
+                    "label": ""
+                },
+                {
+                    "label": "Worked with",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
+                }
+            ]
         }
     ]
 }
