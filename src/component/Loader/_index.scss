@@ -40,7 +40,9 @@
 }
 
 @-webkit-keyframes Loader_CubeGridScaleDelay {
-    0%, 70%, 100% {
+    0%,
+    70%,
+    100% {
         transform: scale3D(1, 1, 1);
     }
     35% {
@@ -49,7 +51,9 @@
 }
 
 @keyframes Loader_CubeGridScaleDelay {
-    0%, 70%, 100% {
+    0%,
+    70%,
+    100% {
         transform: scale3D(1, 1, 1);
     }
     35% {

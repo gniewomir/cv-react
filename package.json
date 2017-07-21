@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "precommit": "lint-staged",
-    "prettier": "./node_modules/.bin/prettier --single-quote --write 'src/**/*.{js,jsx,json,scss}' --tab-width 4",
+    "format": "./node_modules/.bin/prettier --single-quote --write \"src/**/*.{js,jsx,json,scss}\" --tab-width 4",
     "build-css": "node-sass-chokidar --include-path ./node_modules --include-path ./src/ src/ -o src/",
     "watch-css": "yarn run build-css && node-sass-chokidar --include-path ./node_modules --include-path ./src/ src/ -o src/ --watch --recursive",
     "start-json": "node ./node_modules/json-server/bin/index.js --watch --port 3004 --routes ./src/data/routes.json ./src/data/db.json",
