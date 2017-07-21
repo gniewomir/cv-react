@@ -11,6 +11,7 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js start-json",
     "build": "yarn run build-css && react-scripts build",
+    "analyze": "yarn run build && source-map-explorer build/static/js/main.*",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -37,6 +38,7 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "source-map-explorer": "^1.4.0",
     "typographic": "^3.0.0"
   },
   "devDependencies": {
