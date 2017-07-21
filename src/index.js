@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Route } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
+import { Route, Switch } from 'react-router';
+import history from './service/history';
 import { ConnectedRouter } from 'react-router-redux';
 
 import { Provider } from 'react-redux';
@@ -17,13 +17,14 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <Provider store={configureStore()}>
-        <ConnectedRouter history={createHistory()}>
-            <div>
+        <ConnectedRouter history={history}>
+            <Switch>
                 <Route exact path="/" component={App} />
-                <Route path="*" component={Error404} />
-            </div>
+                <Route component={Error404} />
+            </Switch>
         </ConnectedRouter>
     </Provider>,
     document.getElementById('root')
 );
 registerServiceWorker();
+

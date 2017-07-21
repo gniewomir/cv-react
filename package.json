@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "precommit": "lint-staged",
-    "prettier": "./node_modules/.bin/prettier --single-quote --write 'src/**/*.{js,jsx}' --tab-width 4",
+    "prettier": "./node_modules/.bin/prettier --single-quote --write 'src/**/*.{js,jsx,json,scss}' --tab-width 4",
     "build-css": "node-sass-chokidar --include-path ./node_modules --include-path ./src/ src/ -o src/",
     "watch-css": "yarn run build-css && node-sass-chokidar --include-path ./node_modules --include-path ./src/ src/ -o src/ --watch --recursive",
-    "start-json": "node ./node_modules/json-server/bin/index.js --watch --port 3004 --routes ./public/data/routes.json ./public/data/db.json",
+    "start-json": "node ./node_modules/json-server/bin/index.js --watch --port 3004 --routes ./src/data/routes.json ./src/data/db.json",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js start-json",
     "build": "yarn run build-css && react-scripts build",
@@ -15,7 +15,7 @@
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
+    "src/**/*.{js,jsx,json,scss}": [
       "prettier --single-quote --write --tab-width 4",
       "git add"
     ]

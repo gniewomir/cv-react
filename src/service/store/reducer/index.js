@@ -4,9 +4,9 @@ import ObservableReducer from './observable';
 import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
+    router: routerReducer,
     SkillReducer,
-    ObservableReducer,
-    routerReducer
+    ObservableReducer
 });
 
 export default rootReducer;

@@ -1,5 +1,5 @@
 import * as action from '../action/skill';
-import axios from 'axios';
+import data from '../../../data/db.json';
 
 const requestSkills = () => {
     return {
@@ -31,20 +31,17 @@ const filterSkills = query => {
 export const fetchSkills = () => {
     return dispatch => {
         dispatch(requestSkills());
-        return axios
-            .get('/data/db.json')
-            .then(response => {
-                dispatch(recievedSkills(response.data.skills));
-            })
-            .catch(error => {
-                dispatch(errorSkills(error));
-            });
+        if (data.skills) {
+            dispatch(recievedSkills(data.skills));
+        } else {
+            dispatch(errorSkills(data));
+        }
     };
 };
 
 export const searchSkills = query => {
     return dispatch => {
-        dispatch(filterSkills(query));
         dispatch(fetchSkills());
+        dispatch(filterSkills(query));
     };
 };
