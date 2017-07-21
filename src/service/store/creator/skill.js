@@ -41,7 +41,7 @@ export const fetchSkills = () => {
 
 export const searchSkills = query => {
     return dispatch => {
-        dispatch(fetchSkills());
         dispatch(filterSkills(query));
+        dispatch(fetchSkills());
     };
 };
