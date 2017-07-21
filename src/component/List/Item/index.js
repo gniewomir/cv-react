@@ -1,13 +1,14 @@
 import React from 'react';
 import bem from '../../../util/bem';
 
-const Item = ({header, content, children}) => {
+const Item = ({ header, content, children }) => {
     const b = bem('Item');
     return (
         <li className={b()}>
             {header &&
-                <span className={b('Header')}>{header}</span>
-            }
+                <span className={b('Header')}>
+                    {header}
+                </span>}
             {children}
             {content}
         </li>

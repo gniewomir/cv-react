@@ -7,60 +7,66 @@ export const filter = (skills, query) => {
     } else {
         query = query.toLowerCase();
     }
-    skills.forEach(
-        (skill) => {
-            if (skill.title && skill.title.toLowerCase().search(query) !== -1) {
+    skills.forEach(skill => {
+        if (skill.title && skill.title.toLowerCase().search(query) !== -1) {
+            filtered.push(skill);
+            return;
+        }
+        if (
+            skill.tags &&
+            skill.tags.join('').toLowerCase().search(query) !== -1
+        ) {
+            filtered.push(skill);
+            return;
+        }
+        if (
+            skill.description &&
+            skill.description.toLowerCase().search(query) !== -1
+        ) {
+            filtered.push(skill);
+            return;
+        }
+        for (const lvl in skill.level) {
+            if (lvl.enabled && lvl.label.toLowerCase().search(query) !== -1) {
                 filtered.push(skill);
                 return;
-            }
-            if (skill.tags && skill.tags.join('').toLowerCase().search(query) !== -1) {
-                filtered.push(skill);
-                return;
-            }
-            if (skill.description && skill.description.toLowerCase().search(query) !== -1) {
-                filtered.push(skill);
-                return;
-            }
-            for (const lvl in skill.level) {
-                if (lvl.enabled && lvl.label.toLowerCase().search(query) !== -1) {
-                    filtered.push(skill);
-                    return;
-                }
             }
         }
-    );
+    });
     return filtered;
-}
+};
 
-export const sort = (skills) => {
+export const sort = skills => {
     var byLevel = [...skills];
-    byLevel.sort(
-        (a, b) => {
-            var x = 0;
-            var y = 0;
-            a.level.forEach((lvl, index) => {
-                if (lvl.enabled) { x = x+index; }
-            });
-            b.level.forEach((lvl, index) => {
-                if (lvl.enabled) { y = y+index; }
-            });
-            if (a.tags.indexOf('important') !== -1) {
-                x++;
+    byLevel.sort((a, b) => {
+        var x = 0;
+        var y = 0;
+        a.level.forEach((lvl, index) => {
+            if (lvl.enabled) {
+                x = x + index;
             }
-            if (b.tags.indexOf('important') !== -1) {
-                y++;
+        });
+        b.level.forEach((lvl, index) => {
+            if (lvl.enabled) {
+                y = y + index;
             }
-            if (a.tags.indexOf('deprecated') !== -1) {
-                x--;
-            }
-            if (b.tags.indexOf('deprecated') !== -1) {
-                y--;
-            }
-            return y-x;
+        });
+        if (a.tags.indexOf('important') !== -1) {
+            x++;
         }
-    );
+        if (b.tags.indexOf('important') !== -1) {
+            y++;
+        }
+        if (a.tags.indexOf('deprecated') !== -1) {
+            x--;
+        }
+        if (b.tags.indexOf('deprecated') !== -1) {
+            y--;
+        }
+        return y - x;
+    });
     return byLevel;
-}
+};
 
 export default (state, newAction) => {
     if (state === undefined) {
@@ -81,7 +87,7 @@ export default (state, newAction) => {
                 ...state,
                 skills: sort(filter(newAction.payload, state.query)),
                 isLoading: false
-            }
+            };
         case action.SKILL_ERROR:
             return {
                 ...state,
@@ -95,4 +101,4 @@ export default (state, newAction) => {
         default:
             return state;
     }
-}
+};

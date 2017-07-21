@@ -18,10 +18,10 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(
     <Provider store={configureStore()}>
         <ConnectedRouter history={createHistory()}>
-          <div>
-            <Route exact path='/' component={App}/>
-            <Route path='*' component={Error404}/>
-          </div>
+            <div>
+                <Route exact path="/" component={App} />
+                <Route path="*" component={Error404} />
+            </div>
         </ConnectedRouter>
     </Provider>,
     document.getElementById('root')

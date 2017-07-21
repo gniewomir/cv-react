@@ -8,12 +8,6 @@ export default function configureStore(preloadedState) {
     return createStore(
         rootReducer,
         preloadedState,
-        applyMiddleware(
-            routerMiddleware,
-            thunkMiddleware,
-            createLogger()
-        )
-    )
-};
-
-
+        applyMiddleware(routerMiddleware, thunkMiddleware, createLogger())
+    );
+}

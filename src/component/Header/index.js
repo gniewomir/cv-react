@@ -20,10 +20,16 @@ const Header = () => {
                             <h1>Gniewomir Świechowski</h1>
                             <p>
                                 Owner/Developer <Accent>@</Accent> Enraged<br />
-                                Technical Architect <Accent>@</Accent> Gremi Media SA
+                                Technical Architect <Accent>@</Accent> Gremi
+                                Media SA
                             </p>
                             <p>
-                                Experienced full stack developer. Focused on creating maintainable, modular code & following industry best practices. Basically I'am your guy, if you have big pile of legacy code, smaller - but still considerable - pile of money and you don't mind me swearing.
+                                Experienced full stack developer. Focused on
+                                creating maintainable, modular code & following
+                                industry best practices. Basically I'am your
+                                guy, if you have big pile of legacy code,
+                                smaller - but still considerable - pile of money
+                                and you don't mind me swearing.
                             </p>
                         </Column>
                     </Row>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { bindActionCreators } from 'redux';
-import { connect} from 'react-redux';
+import { connect } from 'react-redux';
 import * as actions from '../../service/store/creator/skill';
 
 import Observable from '../Observable';
@@ -13,7 +13,6 @@ import Loader from '../Loader';
 import Filter from './Filter';
 
 class SkillTable extends Component {
-
     componentDidMount() {
         this.props.fetchSkills();
     }
@@ -57,12 +56,10 @@ class SkillTable extends Component {
                             suggestions={suggestions}
                         />
                     </div>
-                    {this.props.loading &&
-                        <Loader />
-                    }
-                    {!this.props.loading && this.props.skills &&
-                        <Listing skills={this.props.skills}/>
-                    }
+                    {this.props.loading && <Loader />}
+                    {!this.props.loading &&
+                        this.props.skills &&
+                        <Listing skills={this.props.skills} />}
                 </Section>
             </Observable>
         );
@@ -71,9 +68,12 @@ class SkillTable extends Component {
 
 export default connect(
     (state, ownProps) => {
-        return { skills: state.SkillReducer.skills, query: state.SkillReducer.query }
+        return {
+            skills: state.SkillReducer.skills,
+            query: state.SkillReducer.query
+        };
     },
-    (dispatch) => {
+    dispatch => {
         return bindActionCreators(actions, dispatch);
     }
 )(SkillTable);

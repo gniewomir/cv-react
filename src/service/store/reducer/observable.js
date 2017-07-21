@@ -12,12 +12,12 @@ export default (state, newAction) => {
             return {
                 ...state,
                 running: true
-            }
+            };
         case action.OBSERVABLE_STOP:
             return {
                 ...state,
                 running: false
-            }
+            };
         case action.OBSERVABLE_REGISTER:
             return {
                 ...state,
@@ -25,7 +25,7 @@ export default (state, newAction) => {
                     ...state.observables,
                     ...newAction.payload
                 }
-            }
+            };
         case action.OBSERVABLE_REMOVE:
             delete state.observables[newAction.payload];
             return {
@@ -38,8 +38,8 @@ export default (state, newAction) => {
             return {
                 ...state,
                 observables: newAction.payload
-            }
+            };
         default:
             return state;
     }
-}
+};

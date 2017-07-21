@@ -4,7 +4,7 @@ import throttle from 'lodash.throttle';
 const Observables = {};
 let Observer = false;
 
-const getObservableStatus = (name) => {
+const getObservableStatus = name => {
     const ref = Observables[name];
     const rect = ref.getBoundingClientRect();
     const height = window.innerHeight;
@@ -14,53 +14,49 @@ const getObservableStatus = (name) => {
         height: ref.offsetHeight,
         width: ref.offsetWidth,
         visibility: {
-            top:     rect.top >= 0,
-            bottom:  rect.bottom <= height,
-            left:    rect.left >= 0,
-            right:   rect.right <= width,
-            whole:   rect.top >= 0 && rect.left >= 0 && rect.bottom <= height && rect.right <= width
+            top: rect.top >= 0,
+            bottom: rect.bottom <= height,
+            left: rect.left >= 0,
+            right: rect.right <= width,
+            whole:
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= height &&
+                rect.right <= width
         }
-    }
-}
+    };
+};
 
-const observe = () => (dispatch) => {
+const observe = () => dispatch => {
     window.addEventListener(
         'scroll',
-        Observer = throttle(
-            () => {
-                const observablesVisibility = {};
-                Object.keys(Observables).forEach(
-                    name => {
-                        observablesVisibility[name] = getObservableStatus(name);
-                    }
-                );
-                dispatch(update(observablesVisibility));
-                return {
-                    type: action.OBSERVABLE_START
-                }
-            },
-            100
-        )
+        (Observer = throttle(() => {
+            const observablesVisibility = {};
+            Object.keys(Observables).forEach(name => {
+                observablesVisibility[name] = getObservableStatus(name);
+            });
+            dispatch(update(observablesVisibility));
+            return {
+                type: action.OBSERVABLE_START
+            };
+        }, 100))
     );
-}
+};
 
-const stop = () => (dispatch) => {
-    window.removeEventListener(
-        'scroll',
-        Observer
-    );
+const stop = () => dispatch => {
+    window.removeEventListener('scroll', Observer);
     Observer = false;
     return {
         type: action.OBSERVABLE_STOP
-    }
-}
+    };
+};
 
-const update = (update) => {
+const update = update => {
     return {
         type: action.OBSERVABLE_UPDATE,
         payload: update
-    }
-}
+    };
+};
 
 const register = (name, ref) => {
     const payload = {};
@@ -69,10 +65,10 @@ const register = (name, ref) => {
     return {
         type: action.OBSERVABLE_REGISTER,
         payload: payload
-    }
-}
+    };
+};
 
-export const removeObservable = (name) => {
+export const removeObservable = name => {
     return dispatch => {
         if (Object.keys(Observables).length === 0) {
             dispatch(stop());
@@ -81,9 +77,9 @@ export const removeObservable = (name) => {
         return {
             type: action.OBSERVABLE_REMOVE,
             payload: name
-        }
-    }
-}
+        };
+    };
+};
 
 export const registerObservable = (name, ref) => {
     return dispatch => {
@@ -91,5 +87,5 @@ export const registerObservable = (name, ref) => {
             dispatch(observe());
         }
         dispatch(register(name, ref));
-    }
-}
+    };
+};

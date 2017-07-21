@@ -1,7 +1,7 @@
 import React from 'react';
 import b from '../../util/bem';
 
-const Section = ({css, children, viewport}) => {
+const Section = ({ css, children, viewport }) => {
     if (!viewport) {
         return (
             <section className={b('Section').mix(css)}>
@@ -11,7 +11,7 @@ const Section = ({css, children, viewport}) => {
     }
 
     return (
-        <section className={b('Section')({viewport: viewport}).mix(css)}>
+        <section className={b('Section')({ viewport: viewport }).mix(css)}>
             <div className={b('Section')('outer')}>
                 <div className={b('Section')('middle')}>
                     {children}
@@ -19,7 +19,6 @@ const Section = ({css, children, viewport}) => {
             </div>
         </section>
     );
-
 };
 
 export default Section;

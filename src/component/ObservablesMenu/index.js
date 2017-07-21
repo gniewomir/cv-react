@@ -14,42 +14,49 @@ import Link from '../Link';
 import ScrollProgress from '../ScrollProgress';
 
 class ObservablesMenu extends Component {
-
     render() {
         const b = bem('ObservablesMenu');
-        const {observables, items} = this.props;
-        const common = Object.keys(observables).filter(key => typeof items[key] !== undefined);
+        const { observables, items } = this.props;
+        const common = Object.keys(observables).filter(
+            key => typeof items[key] !== undefined
+        );
         const top = document.body.scrollTop;
         const progress = () => {
             const h = document.documentElement;
             const b = document.body;
             const st = 'scrollTop';
             const sh = 'scrollHeight';
-            return ((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
-        }
+            return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+        };
         return (
             <nav className={b()}>
-                <ScrollProgress progress={progress()}/>
+                <ScrollProgress progress={progress()} />
                 <List horizontal nofold>
-                    {common.map(
-                        (key, index) => {
-                            return (
-                                <Item key={index}>
-                                    <span className={b('Item')}>
-                                        <Link
-                                            undecorated={
-                                                top + 1 <= observables[key].offsetTop ||
-                                                top >= observables[key].offsetTop + observables[key].height
-                                            }
-                                            content={items[key].label}
-                                            href='#'
-                                            onClick={(e) => { e.preventDefault(); animateScrollTo(observables[key].offsetTop); }}
-                                        />
-                                    </span>
-                                </Item>
-                            );
-                        }
-                    )}
+                    {common.map((key, index) => {
+                        return (
+                            <Item key={index}>
+                                <span className={b('Item')}>
+                                    <Link
+                                        undecorated={
+                                            top + 1 <=
+                                                observables[key].offsetTop ||
+                                            top >=
+                                                observables[key].offsetTop +
+                                                    observables[key].height
+                                        }
+                                        content={items[key].label}
+                                        href="#"
+                                        onClick={e => {
+                                            e.preventDefault();
+                                            animateScrollTo(
+                                                observables[key].offsetTop
+                                            );
+                                        }}
+                                    />
+                                </span>
+                            </Item>
+                        );
+                    })}
                 </List>
             </nav>
         );
@@ -58,9 +65,9 @@ class ObservablesMenu extends Component {
 
 export default connect(
     (state, ownProps) => {
-        return { observables: state.ObservableReducer.observables }
+        return { observables: state.ObservableReducer.observables };
     },
-    (dispatch) => {
+    dispatch => {
         return bindActionCreators(actions, dispatch);
     }
 )(ObservablesMenu);

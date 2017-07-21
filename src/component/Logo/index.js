@@ -4,8 +4,12 @@ import Svg from '../../image/svg/logo.svg';
 
 const Logo = () => {
     return (
-        <img className={b('Logo')} src={Svg} alt="Enraged Gniewomir Świechowski - logo" />
+        <img
+            className={b('Logo')}
+            src={Svg}
+            alt="Enraged Gniewomir Świechowski - logo"
+        />
     );
-}
+};
 
 export default Logo;

@@ -3,6 +3,8 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
+    "precommit": "lint-staged",
+    "prettier": "./node_modules/.bin/prettier --single-quote --write 'src/**/*.{js,jsx}' --tab-width 4",
     "build-css": "node-sass-chokidar --include-path ./node_modules --include-path ./src/ src/ -o src/",
     "watch-css": "yarn run build-css && node-sass-chokidar --include-path ./node_modules --include-path ./src/ src/ -o src/ --watch --recursive",
     "start-json": "node ./node_modules/json-server/bin/index.js --watch --port 3004 --routes ./public/data/routes.json ./public/data/db.json",
@@ -11,6 +13,12 @@
     "build": "yarn run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write --tab-width 4",
+      "git add"
+    ]
   },
   "dependencies": {
     "animated-scroll-to": "^1.1.3",
