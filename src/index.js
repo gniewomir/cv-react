@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 
 import { Route, Switch } from 'react-router';
 import history from './service/history';
@@ -19,7 +19,7 @@ import SkillTable from './component/SkillTable';
 import Contact from './component/Contact';
 import Menu from './component/Menu';
 
-ReactDOM.render(
+render(
     <Provider store={configureStore()}>
         <ConnectedRouter history={history}>
             <Switch>
