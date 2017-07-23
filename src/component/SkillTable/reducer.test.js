@@ -1,4 +1,4 @@
-import SkillReducer from './skill';
+import SkillReducer from './reducer.js';
 
 test('reducer returns correct initial state', () => {
     expect(SkillReducer(undefined, {})).toEqual({

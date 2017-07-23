@@ -8,6 +8,9 @@ export const Error404 = () => {
         <Section viewport>
             <div className={b()}>
                 <h1 className={b('Header')}>404</h1>
+                <p>
+                    Return to <a title="Back to homepage" href="/">homepage</a>
+                </p>
             </div>
         </Section>
     );

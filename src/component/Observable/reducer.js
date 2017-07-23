@@ -1,4 +1,4 @@
-import * as action from '../action/observable';
+import * as action from './actions.js';
 
 export default (state, newAction) => {
     if (state === undefined) {

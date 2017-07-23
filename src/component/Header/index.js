@@ -9,7 +9,7 @@ import Observable from '../Observable';
 
 const Header = () => {
     return (
-        <Observable name="header">
+        <Observable name="home" label="Home" menu>
             <Section viewport>
                 <div className={bem('Header')}>
                     <Row gutter>

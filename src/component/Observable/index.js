@@ -2,19 +2,29 @@ import React, { Component } from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actions from '../../service/store/creator/observable';
+import * as creators from './creators.js';
 
 class Observable extends Component {
+
     componentWillUnmount() {
         this.props.removeObservable(this.props.name);
     }
 
     render() {
+        const { menu, label, name } = this.props;
         const refCallback = observable => {
             if (observable === null) {
                 return;
             }
-            this.props.registerObservable(this.props.name, observable);
+            this.props.registerObservable(
+                this.props.name,
+                observable,
+                {
+                    menu: menu,
+                    label: label,
+                    name: name
+                }
+            );
         };
         return (
             <div ref={refCallback}>
@@ -25,10 +35,8 @@ class Observable extends Component {
 }
 
 export default connect(
-    (state, ownProps) => {
-        return { name: ownProps.name };
-    },
+    null,
     dispatch => {
-        return bindActionCreators(actions, dispatch);
+        return bindActionCreators(creators, dispatch);
     }
 )(Observable);

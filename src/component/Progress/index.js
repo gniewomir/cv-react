@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import bem from '../../util/bem';
 
-export default class ScrollProgress extends Component {
+export default class Progress extends Component {
     render() {
-        const b = bem('ScrollProgress');
+        const b = bem('Progress');
         return (
             <div className={b()}>
                 <div

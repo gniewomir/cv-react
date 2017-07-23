@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actions from '../../service/store/creator/skill';
+import * as creators from './creators';
 
 import Observable from '../Observable';
 
@@ -46,7 +46,7 @@ class SkillTable extends Component {
             }
         ];
         return (
-            <Observable name="skilltable">
+            <Observable name="skilltable" label="Skills" menu>
                 <Section className={b()}>
                     <h1 className={b('Header')}>Skills</h1>
                     <div className={b('Filter')}>
@@ -69,11 +69,11 @@ class SkillTable extends Component {
 export default connect(
     (state, ownProps) => {
         return {
-            skills: state.SkillReducer.skills,
-            query: state.SkillReducer.query
+            skills: state.skills.skills,
+            query: state.skills.query
         };
     },
     dispatch => {
-        return bindActionCreators(actions, dispatch);
+        return bindActionCreators(creators, dispatch);
     }
 )(SkillTable);

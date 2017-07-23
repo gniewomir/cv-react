@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actions from '../../service/store/creator/observable';
+import * as creators from '../Observable/creators';
 
 import bem from '../../util/bem';
 
@@ -11,14 +11,15 @@ import animateScrollTo from 'animated-scroll-to';
 import List from '../List';
 import Item from '../List/Item';
 import Link from '../Link';
-import ScrollProgress from '../ScrollProgress';
+import Progress from '../Progress';
+import Auth from '../Auth';
 
-class ObservablesMenu extends Component {
+class Menu extends Component {
     render() {
-        const b = bem('ObservablesMenu');
-        const { observables, items } = this.props;
-        const common = Object.keys(observables).filter(
-            key => typeof items[key] !== undefined
+        const b = bem('Menu');
+        const { observables } = this.props;
+        const items = Object.values(observables).filter(
+            observable => observable.menu === true
         );
         const top = document.body.scrollTop;
         const progress = () => {
@@ -30,26 +31,26 @@ class ObservablesMenu extends Component {
         };
         return (
             <nav className={b()}>
-                <ScrollProgress progress={progress()} />
+                <Progress progress={progress()} />
                 <List horizontal nofold>
-                    {common.map((key, index) => {
+                    {items.map((item, index) => {
                         return (
                             <Item key={index}>
                                 <span className={b('Item')}>
                                     <Link
                                         undecorated={
                                             top + 1 <=
-                                                observables[key].offsetTop ||
+                                            item.offsetTop ||
                                             top >=
-                                                observables[key].offsetTop +
-                                                    observables[key].height
+                                            item.offsetTop +
+                                            item.height
                                         }
-                                        content={items[key].label}
+                                        content={item.label}
                                         href="#"
                                         onClick={e => {
                                             e.preventDefault();
                                             animateScrollTo(
-                                                observables[key].offsetTop
+                                                item.offsetTop
                                             );
                                         }}
                                     />
@@ -57,17 +58,20 @@ class ObservablesMenu extends Component {
                             </Item>
                         );
                     })}
+                    <Item right>
+                        <Auth />
+                    </Item>
                 </List>
-            </nav>
+            </nav >
         );
     }
 }
 
 export default connect(
     (state, ownProps) => {
-        return { observables: state.ObservableReducer.observables };
+        return { observables: state.observables.observables };
     },
     dispatch => {
-        return bindActionCreators(actions, dispatch);
+        return bindActionCreators(creators, dispatch);
     }
-)(ObservablesMenu);
+)(Menu);

@@ -1,4 +1,4 @@
-import * as action from '../action/skill';
+import * as action from './actions.js';
 
 export const filter = (skills, query) => {
     const filtered = [];

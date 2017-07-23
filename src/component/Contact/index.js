@@ -11,7 +11,7 @@ import Observable from '../Observable';
 
 const Contact = () => {
     return (
-        <Observable name="contact">
+        <Observable name="contact" label="Contact" menu>
             <Section viewport css={b('Contact')}>
                 <h1>Contact</h1>
                 <Row gutter>

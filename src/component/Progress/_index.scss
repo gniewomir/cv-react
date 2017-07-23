@@ -1,4 +1,4 @@
-.ScrollProgress__Progress {
+.Progress__Progress {
     display: none;
     @media (min-width: map_get($breakpoints, 'lg') + px) {
         display: block;

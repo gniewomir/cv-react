@@ -10,16 +10,38 @@ import configureStore from './service/store';
 
 import './index.css';
 
-import App from './component/App';
 import Error404 from './component/Error404';
 
 import registerServiceWorker from './registerServiceWorker';
+
+import Header from './component/Header';
+import SkillTable from './component/SkillTable';
+import Contact from './component/Contact';
+import Menu from './component/Menu';
 
 ReactDOM.render(
     <Provider store={configureStore()}>
         <ConnectedRouter history={history}>
             <Switch>
-                <Route exact path="/" component={App} />
+                <Route exact path="/" children>
+                    <div>
+                        <Menu />
+                        <Header />
+                        <SkillTable />
+                        <Contact />
+                    </div>
+                </Route>
+                <Route exact path="/skills" children>
+                    <div>
+                        <SkillTable />
+                        <Contact />
+                    </div>
+                </Route>
+                <Route exact path="/contact" children>
+                    <div>
+                        <Contact />
+                    </div>
+                </Route>
                 <Route component={Error404} />
             </Switch>
         </ConnectedRouter>

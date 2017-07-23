@@ -1,5 +1,5 @@
-import * as action from '../action/skill';
-import data from '../../../data/db.json';
+import * as action from './actions.js';
+import data from '../../data/db.json';
 
 const requestSkills = () => {
     return {
