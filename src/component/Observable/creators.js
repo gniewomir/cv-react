@@ -31,32 +31,28 @@ const getObservableStatus = (name) => {
     };
 };
 
+const getAllObservablesStatus = () => {
+    const observablesData = {};
+    Object.keys(Observables).forEach(name => {
+        observablesData[name] = getObservableStatus(name);
+    });
+    return observablesData;
+}
+
 const observe = () => dispatch => {
+    window.removeEventListener('scroll', ObserverScroll);
     window.addEventListener(
         'scroll',
         (ObserverScroll = throttle(() => {
-            const observablesData = {};
-            Object.keys(Observables).forEach(name => {
-                observablesData[name] = getObservableStatus(name, observablesData[name]);
-            });
-            dispatch(update(observablesData));
-            return {
-                type: action.OBSERVABLE_START
-            };
+            dispatch(update(getAllObservablesStatus()));
         }, 16)),
         false
     );
+    window.removeEventListener('resize', ObserverResize);
     window.addEventListener(
         'resize',
         (ObserverResize = debounce(() => {
-            const observablesData = {};
-            Object.keys(Observables).forEach(name => {
-                observablesData[name] = getObservableStatus(name, observablesData[name]);
-            });
-            dispatch(update(observablesData));
-            return {
-                type: action.OBSERVABLE_START
-            };
+            dispatch(update(getAllObservablesStatus()));
         }, 16)),
         false
     );
@@ -64,9 +60,7 @@ const observe = () => dispatch => {
 
 const stop = () => dispatch => {
     window.removeEventListener('scroll', ObserverScroll);
-    ObserverScroll = false;
     window.removeEventListener('resize', ObserverResize);
-    ObserverResize = false;
     return {
         type: action.OBSERVABLE_STOP
     };
@@ -93,24 +87,21 @@ const register = (name, ref, extra) => {
     };
 };
 
-export const removeObservable = name => {
-    return dispatch => {
-        delete Observables[name];
-        if (Object.keys(Observables).length === 0) {
-            dispatch(stop());
-        }
-        return {
-            type: action.OBSERVABLE_REMOVE,
-            payload: name
-        };
+export const removeObservable = name => dispatch => {
+    delete Observables[name];
+    if (Object.keys(Observables).length === 0) {
+        dispatch(stop());
+    }
+    return {
+        type: action.OBSERVABLE_REMOVE,
+        payload: name
     };
 };
 
-export const registerObservable = (name, ref, extra = {}) => {
-    return dispatch => {
-        if (ObserverScroll === false || ObserverResize === false) {
-            dispatch(observe());
-        }
-        dispatch(register(name, ref, extra));
-    };
+export const registerObservable = (name, ref, extra = {}) => dispatch => {
+    if (ObserverScroll === false || ObserverResize === false) {
+        dispatch(observe());
+    }
+    dispatch(register(name, ref, extra));
+    dispatch(update(getAllObservablesStatus()));
 };
