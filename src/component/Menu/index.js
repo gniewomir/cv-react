@@ -61,7 +61,9 @@ class Menu extends Component {
                         );
                     })}
                     <Item right>
-                        <Auth />
+                        <span className={b('Item')}>
+                            <Auth />
+                        </span>
                     </Item>
                 </List>
             </nav >
