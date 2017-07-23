@@ -13,7 +13,7 @@ class Auth extends Component {
     render() {
         const b = bem('Auth');
         return (
-            <div className={b()}>
+            <span className={b()}>
                 {
                     !this.props.auth.authenticated &&
                     <GoogleLogin
@@ -22,7 +22,6 @@ class Auth extends Component {
                         onFailure={this.props.authenticationError}
                         className={b('Link')}
                         tag="A"
-                        style={{ textDecoration: 'none', border: 0, cursor: 'pointer' }}
                     >
                         login
                     </GoogleLogin >
@@ -33,7 +32,7 @@ class Auth extends Component {
                         (<a className={b('Link')} onClick={this.props.authenticationRefuse}>logout</a>)
                     </span>
                 }
-            </div>
+            </span>
         );
     }
 }
