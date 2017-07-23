@@ -8,6 +8,8 @@ import bem from '../../util/bem';
 
 import animateScrollTo from 'animated-scroll-to';
 
+import document from '../../service/document';
+
 import List from '../List';
 import Item from '../List/Item';
 import Link from '../Link';

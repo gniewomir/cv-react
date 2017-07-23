@@ -13,7 +13,8 @@
     "build": "yarn run build-css && react-scripts build",
     "analyze": "yarn run build && source-map-explorer build/static/js/main.*",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "bash ./shell/deploy.sh lightsail"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,scss}": [

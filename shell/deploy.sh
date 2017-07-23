@@ -14,4 +14,3 @@ ssh "$1" "find /var/www/enraged.pl/* | grep -v \".well-known\" | xargs rm -rf" #
 [[ $? = 0 ]] || exit 1
 scp -rp ./build/* "$DESTINATION"
 [[ $? = 0 ]] || exit 1
-git checkout develop
