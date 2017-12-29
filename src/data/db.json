@@ -763,6 +763,32 @@
                     "label": ""
                 }
             ]
+        },
+        {
+            "id": 29,
+            "title": "CI/CD",
+            "description": "I've moved whole company form FTP to Gitlab CI using Docker/SSH executors. It was great idea.",
+            "tags": ["important", "architecture"],
+            "level": [
+                {
+                    "label": "Worked with",
+                    "enabled": true
+                },
+                {
+                    "label": "Configured deployment (Gitlab CI)",
+                    "enabled": true,
+                    "important": true
+                },
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
+                }
+            ]
         }
     ]
 }
