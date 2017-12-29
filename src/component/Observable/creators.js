@@ -1,13 +1,13 @@
-import * as action from './actions.js';
-import throttle from 'lodash.throttle';
-import debounce from 'lodash.debounce';
-import window from '../../service/window';
+import * as action from "./actions.js";
+import throttle from "lodash.throttle";
+import debounce from "lodash.debounce";
+import window from "../../service/window";
 
 const Observables = {};
-let ObserverScroll = false;
-let ObserverResize = false;
+let ObserverScroll = () => {};
+let ObserverResize = () => {};
 
-const getObservableStatus = (name) => {
+const getObservableStatus = name => {
     const ref = Observables[name].ref;
     const rect = ref.getBoundingClientRect();
     const height = window.innerHeight;
@@ -23,10 +23,10 @@ const getObservableStatus = (name) => {
             left: rect.left >= 0,
             right: rect.right <= width,
             whole:
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= height &&
-            rect.right <= width
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= height &&
+                rect.right <= width
         }
     };
 };
@@ -37,20 +37,20 @@ const getAllObservablesStatus = () => {
         observablesData[name] = getObservableStatus(name);
     });
     return observablesData;
-}
+};
 
 const observe = () => dispatch => {
-    window.removeEventListener('scroll', ObserverScroll);
+    window.removeEventListener("scroll", ObserverScroll);
     window.addEventListener(
-        'scroll',
+        "scroll",
         (ObserverScroll = throttle(() => {
             dispatch(update(getAllObservablesStatus()));
         }, 16)),
         false
     );
-    window.removeEventListener('resize', ObserverResize);
+    window.removeEventListener("resize", ObserverResize);
     window.addEventListener(
-        'resize',
+        "resize",
         (ObserverResize = debounce(() => {
             dispatch(update(getAllObservablesStatus()));
         }, 16)),
@@ -59,8 +59,8 @@ const observe = () => dispatch => {
 };
 
 const stop = () => dispatch => {
-    window.removeEventListener('scroll', ObserverScroll);
-    window.removeEventListener('resize', ObserverResize);
+    window.removeEventListener("scroll", ObserverScroll);
+    window.removeEventListener("resize", ObserverResize);
     return {
         type: action.OBSERVABLE_STOP
     };
@@ -80,10 +80,10 @@ const register = (name, ref, extra) => {
     };
     return {
         type: action.OBSERVABLE_REGISTER,
-        payload: {}[name] = {
+        payload: ({}[name] = {
             ...getObservableStatus(name),
             ...extra
-        }
+        })
     };
 };
 
